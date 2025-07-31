@@ -15,3 +15,53 @@
 -- SELECT CURDATE() AS DATE;
 -- SELECT NAME,MARK FROM STUDENTS ORDER BY MARK ASC;
 -- SELECT NAME,MARK FROM STUDENTS ORDER BY MARK DESC;
+
+-------------------------------------------------------------------------
+
+TASK
+
+-- create database company;
+-- use company
+-- create table emp(Sno int,first_name varchar(100) primary key,last_name varchar(50),department varchar(200),salary int)
+
+-- insert into emp values(5,"keerthana","s","cse",20000),(6,"swathi","s","cse",40000),(7,"vicky","a r b","it",80000);
+
+-- select*from emp;
+-- drop table emp;
+-- select last_name from emp order by last_name desc;
+-- SELECT DEPARTMENT,COUNT(department) FROM emp GROUP BY DEPARTMENT;
+select department,salary from emp where department = "aids" order by salary desc
+
+
+
+-----------------------------------------------------------------------------------------
+
+-- COMMIT EOLLBACK SAVEPOINT --
+-- SET SQL_SAFE_UPDATES = 0;
+-- set autocommit = 0;
+-- start transaction
+-- delete from emp where sno = 1;
+-- commit;
+-- select*from emp;
+-- rollback;
+
+-- delete from emp where sno=1;
+-- savepoint sp1;
+-- delete from emp where sno=2;
+-- savepoint sp2;
+-- delete from emp where sno=3;
+-- savepoint sp3;
+-- delete from emp where sno=4;
+-- savepoint sp4;
+
+-- select*from emp;
+
+-- rollback to sp1;
+
+select p1.rno,p1.name,p1.company_name,p2.location from p1 join p2 on p1.coompany_name = p2.comapany_name;
+select p1.rno,p1.name,p1.company_name,p2.location from p1 inner join p2 on p1.coompany_name = p2.comapany_name;
+select p1.rno,p1.name,p1.company_name,p2.location from p1 cross join p2 on p1.coompany_name = p2.comapany_name;
+select p1.rno,p1.name,p1.company_name,p2.location from p1 left join p2 on p1.coompany_name = p2.comapany_name;
+select p1.rno,p1.name,p1.company_name,p2.location from p1 right join p2 on p1.coompany_name = p2.comapany_name;
+
+
