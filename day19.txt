@@ -1,0 +1,95 @@
+create database artist;
+use artist;
+create table md(
+Sno int,name varchar(30),song varchar(30)
+);
+select * from md;
+select name from md;
+alter table music_directors add movies varchar(50);
+alter table music_directors modify movies int;
+alter table music_directors drop column movies;
+Rename table music_directors to Md;	
+drop table md;
+INSERT INTO md VALUES (2, 'U1', 'Spark');
+set sql_safe_updates = 0;
+update md set song="Monica" where name="Ani";
+
+-- single line command
+/* 
+multi line command
+*/
+
+delete from md where sno=2;
+truncate md;
+
+create database company;
+use company;
+create table emp(
+emp_id int,name varchar(50),salary int,dept varchar(30)
+);
+
+alter table emp add email varchar(100);
+
+alter table emp drop column dept;
+
+rename table emp to staff;
+
+select*from staff;
+
+insert into staff values (101,"Arun",40000,"arun@gmail.com"),(102,"Santhosh",45000,"santhosh@gmail.com");
+set sql_safe_update = 0;
+update staff set salary=60000 where name="Arun";
+
+select*from staff where salary>40000;
+
+delete from staff where emp_id=102;
+
+truncate staff;
+
+drop database company;
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+TASK 1:
+
+1. Create Table
+Task: Create a table employees with columns:
+•	emp_id INT 
+•	name VARCHAR(50)
+•	salary INT
+•	dept VARCHAR(30)
+
+2. Modify Table
+Task: Add a new column email (type
+: VARCHAR(100)) to the employees table.
+
+3. Drop Column
+Task: Remove the column dept from the employees table.
+
+
+4. Rename Table
+Task: Rename the employees table to staff.
+
+5. Insert Data
+emp_id	name	salary	email
+101	Arun	40000	Arun@mail.com
+
+102	Santhosh	45000	santhosh@mail.com
+
+
+6. Update Salary
+Task: Increase salary by 60000 for employee whose name is 'Arun’.
+
+7.  Delete Employee
+Task: Delete employee with emp_id = 102.
+
+8.Select Records
+Task: Display all employees whose salary is more than 40,000
+9.Truncate Table
+Task: Clear all data from the staff table but keep the table structure.
+
+10. Delete database
+
+
+
+
