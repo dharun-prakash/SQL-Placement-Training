@@ -24,7 +24,7 @@ truncate md;
 
 create database company;
 use company;
-create table emp(
+create table emp (
 emp_id int,name varchar(50),salary int,dept varchar(30)
 );
 
